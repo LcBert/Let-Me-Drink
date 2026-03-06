@@ -1,3 +1,6 @@
 {
+    "itemGroup.let_me_drink": "Let Me Drink",
+    "item.let_me_drink.beer": "Beer",
+    "item.tooltip.let_me_drink.beer": "Drink to increase your drunk level",
     "effect.let_me_drink.drunk": "Drunk"
 }

@@ -13,6 +13,6 @@ public class ModAttachments {
 
     public static void register(IEventBus bus) {
         ATTACHMENT_TYPES.register(bus);
-        DrinkAttachments.register();
+        DrunkAttachments.register();
     }
 }
