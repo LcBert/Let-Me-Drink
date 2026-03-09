@@ -10,6 +10,9 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ItemsRegistry {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(LetMeDrink.MODID);
 
+    public static final DeferredItem<Item> TANKARD = ITEMS.register(
+            "tankard", () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> BEER = ITEMS.register(
             "beer", () -> new DrinkItem());
 

@@ -19,6 +19,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("itemGroup.let_me_drink"))
                     .icon(() -> new ItemStack(ItemsRegistry.BEER.get()))
                     .displayItems((parameters, output) -> {
+                        output.accept(ItemsRegistry.TANKARD.get());
                         output.accept(ItemsRegistry.BEER.get());
                     }).build());
 

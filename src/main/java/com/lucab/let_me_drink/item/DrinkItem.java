@@ -3,10 +3,12 @@ package com.lucab.let_me_drink.item;
 import java.util.List;
 
 import com.lucab.let_me_drink.attachment.DrunkAttachments;
+import com.lucab.let_me_drink.event.DrunkEvent;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -33,8 +35,12 @@ public class DrinkItem extends Item {
         if (livingEntity.level().isClientSide)
             return stack;
 
-        DrunkAttachments drinkData = livingEntity.getData(DrunkAttachments.DRUNK_ATTACHMENTS.get());
-        drinkData.addDrunkLevel();
+        if (livingEntity instanceof Player player) {
+            DrunkAttachments drinkData = player.getData(DrunkAttachments.DRUNK_ATTACHMENTS.get());
+            drinkData.addDrunkLevel();
+            DrunkEvent.faintPlayer(player);
+            return stack;
+        }
         return stack;
     }
 
