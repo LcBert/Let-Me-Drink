@@ -3,5 +3,6 @@
     "item.let_me_drink.tankard": "Tankard",
     "item.let_me_drink.beer": "Beer",
     "item.tooltip.let_me_drink.beer": "Drink to increase your drunk level",
-    "effect.let_me_drink.drunk": "Drunk"
+    "effect.let_me_drink.drunk": "Drunk",
+    "block.let_me_drink.fermenter": "Fermenter"
 }

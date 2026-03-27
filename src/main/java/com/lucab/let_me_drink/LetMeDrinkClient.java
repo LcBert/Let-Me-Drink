@@ -1,11 +1,15 @@
 package com.lucab.let_me_drink;
 
+import com.lucab.let_me_drink.client.gui.FermenterScreen;
+import com.lucab.let_me_drink.world.inventory.MenuRegistry;
+
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
@@ -14,6 +18,11 @@ import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 public class LetMeDrinkClient {
     public LetMeDrinkClient(ModContainer container) {
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+    }
+
+    @SubscribeEvent
+    public static void registerScreens(RegisterMenuScreensEvent event) {
+        event.register(MenuRegistry.FERMENTER_MENU.get(), FermenterScreen::new);
     }
 
     @SubscribeEvent

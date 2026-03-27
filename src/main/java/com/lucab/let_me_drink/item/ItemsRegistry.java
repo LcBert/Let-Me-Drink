@@ -1,7 +1,6 @@
 package com.lucab.let_me_drink.item;
 
 import com.lucab.let_me_drink.LetMeDrink;
-
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;

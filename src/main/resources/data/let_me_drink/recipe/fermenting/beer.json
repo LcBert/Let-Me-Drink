@@ -1,0 +1,21 @@
+{
+    "type": "let_me_drink:fermenting",
+    "ingredients": [
+        {
+            "item": "minecraft:wheat",
+            "count": 4
+        }
+    ],
+    "container": {
+        "item": "let_me_drink:tankard"
+    },
+    "fluid": {
+        "id": "minecraft:water",
+        "amount": 250
+    },
+    "result": {
+        "id": "let_me_drink:beer",
+        "count": 1
+    },
+    "processTime": 200
+}

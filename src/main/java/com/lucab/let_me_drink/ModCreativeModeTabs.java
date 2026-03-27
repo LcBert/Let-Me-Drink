@@ -1,5 +1,6 @@
 package com.lucab.let_me_drink;
 
+import com.lucab.let_me_drink.block.BlocksRegistry;
 import com.lucab.let_me_drink.item.ItemsRegistry;
 
 import net.minecraft.core.registries.Registries;
@@ -19,6 +20,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("itemGroup.let_me_drink"))
                     .icon(() -> new ItemStack(ItemsRegistry.BEER.get()))
                     .displayItems((parameters, output) -> {
+                        output.accept(BlocksRegistry.FERMENTER_ITEM.get());
                         output.accept(ItemsRegistry.TANKARD.get());
                         output.accept(ItemsRegistry.BEER.get());
                     }).build());
